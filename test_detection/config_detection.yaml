@@ -1,0 +1,67 @@
+# Configuration file for running speed test
+# Dataset directory for testing
+HSI_DIR: "data/snp_dataset/snp_msi.npy"
+MASK_DIR: "data/snp_dataset/snp_mask.npy"
+
+# General detector params
+N_REPEATS: 1
+
+# Skip metrics calculation in show results
+SKIP_METRICS: False
+
+# Define models to include in test and their parameters
+rx_baseline:
+  include: True
+  buffer_len: 99
+  normalise_md: True
+  threshold: 1.5
+  classifier: null
+
+rt_ck_rxd:
+  include: True
+  buffer_len: 99
+  normalise_md: True
+  threshold: 1.5
+  classifier: null
+
+rx_bil:
+  include: True
+  buffer_len: 99
+  pixel_dropout: 0.5
+  normalise_md: True
+  threshold: 1.5
+  classifier: null
+
+cdlss_ad:
+  include: False
+  buffer_len: 99
+  normalise_md: True
+  threshold: null
+  classifier: null
+
+lbl_ad:
+  include: True
+  buffer_len: 99
+  pca_dims: 3
+  normalise_md: True
+  threshold: 1.5
+  auto_threshold: False
+  classifier: null
+
+erx:
+  include: True
+  buffer_len: 99
+  momentum: 0.5
+  line_offset: 30
+  normalise_md: True
+  threshold: 1.5
+  classifier: null
+
+erx_r:
+  include: False
+  buffer_len: 99
+  momentum: 0.001
+  line_offset: 30
+  normalise_md: False
+  threshold: null
+  classifier: null

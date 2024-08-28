@@ -1,0 +1,18 @@
+# Configuration file for running speed test
+# Dataset directory for testing
+HSI_DIR: "data/snp_dataset/snp_msi.npy"
+MASK_DIR: "data/snp_dataset/snp_mask.npy"
+
+# General detector params
+N_REPEATS: 1
+
+# Skip metrics calculation in show results
+SKIP_METRICS: False
+
+# ERX Params
+BUFFER_LEN: 99
+MOMENTUM_LIST: [0.9, 0.5, 0.1, 0.01, 0.001, 0.0001, 0.00001, 0.000001]
+LINE_OFFSET: 30
+NORMALISE_MD: True
+THRESHOLD: 5
+
