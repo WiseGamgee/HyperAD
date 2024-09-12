@@ -8,7 +8,9 @@ class ERX(Detector):
     """
     A fast RX variant that updates the mean and covariance using exponentially moving statistics
     Implementation published in:
-
+    Garske, Samuel and Evans, Bradley and Artlett, Christopher and Wong, KC, 2024.
+    ERX - a Fast Real-Time Anomaly Detection Algorithm for Hyperspectral Line-Scanning
+    arXiv preprint arXiv:2408.14947
     """
     def __init__(self,
                  n_bands: int,
@@ -124,7 +126,9 @@ class ERX_R(Detector):
     """
     A version of ERX that uses correlation instead of covariance when calculating Mahalanobis distance.
     Implementation published in:
-
+    Garske, Samuel and Evans, Bradley and Artlett, Christopher and Wong, KC, 2024.
+    ERX - a Fast Real-Time Anomaly Detection Algorithm for Hyperspectral Line-Scanning
+    arXiv preprint arXiv:2408.14947
     """
     def __init__(self,
                  n_bands: int,

@@ -8,6 +8,10 @@ class RXBaseline(Detector):
     """
     A very basic dynamic, real-time model implementation for detecting anomalies.
     Used as a baseline approach for comparing performance to other methods.
+    Implementation published in:
+    Garske, Samuel and Evans, Bradley and Artlett, Christopher and Wong, KC, 2024.
+    ERX - a Fast Real-Time Anomaly Detection Algorithm for Hyperspectral Line-Scanning
+    arXiv preprint arXiv:2408.14947
     """
     def __init__(self,
                  n_bands: int,
