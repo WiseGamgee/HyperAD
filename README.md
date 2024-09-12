@@ -1,9 +1,32 @@
 # HyperAD
- HyperAD is a Python project that implements various RX-based real-time anomaly detection 
- algorithms designed for hyperspectral line-scan cameras. It also proposes the Exponentially moving RX (ERX)
- algorithm for this task.
+## Contents
+1. [Introduction](#introduction-a-nameintroductiona)
+2. [How to Get Started](#how-to-get-started-a-namequickstarta)
+3. [Datasets](#datasets-a-namedatasetsa)
+4. [Line-Scan Simulation](#line-scan-simulation-a-namesimulationa)
+5. [Experiments](#experiments-a-nameexperimentsa)
+6. [Cite this Work](#cite-this-work-a-namecitinga)
 
-## How to Get Started
+## Introduction <a name="introduction"></a>
+HyperAD is a Python project that implements various RX-based real-time anomaly detection 
+algorithms designed for hyperspectral line-scan cameras. It also proposes the Exponentially moving RX (ERX)
+algorithm for this task.
+
+Line-scan cameras capture one line of pixels at a time, and require the motion of an attached platform 
+such as a drone, aircraft, or satellite to collect an image. They are an affordable way of collecting
+hyperspectral images with high spectral and spatial resolutions.
+<p align="center">
+ <img src="images/linescan.png" alt="Line-scanning (Garske et al. 2024)" width="528" height="300" >
+</p>
+<p align="center">
+ <em>A line-scan camera capturing one line of pixels at a time as it’s platform (e.g., a drone) moves 
+     over the area of interest. These lines form a hyperspectral image, or datacube, with the depth dimension 
+     b representing the spectral bands for each pixel (Garske et al. 2024).</em>
+</p>
+
+
+
+## How to Get Started <a name="quickstart"></a>
 
 1. Install python (this project was built on Python 3.9).
 
@@ -25,7 +48,7 @@ export PYTHONPATH=..
 
 Please feel free to raise any issues with this guide or the code in general.
 
-## Datasets
+## Datasets <a name="datasets"></a>
 Three annotated datasets are openly available [here](https://zenodo.org/doi/10.5281/zenodo.13370799) in .npy format (height, width, channels for image files, and height, width for masks):
 ### Beach dataset - a natural coastal area with a variety of human-made anomalies present :car:
 ![Beach RGB](images/beach_rgb.png)
@@ -37,7 +60,7 @@ Three annotated datasets are openly available [here](https://zenodo.org/doi/10.5
 ![SNP False Colour](images/snp_rgb.png)
 ![SNP Ground Truth](images/snp_gt.png)
 
-## Line-Scan Simulation
+## Line-Scan Simulation <a name="simulation"></a>
 The project simulates a line-scan camera by feeding each image dataset one line of pixels at a time 
 to each detection algorithm. The simulation consists of two objects:
  - A sampler, which is used to store a hyperspectral image dataset and feed it line-by-line to the detector
@@ -46,7 +69,7 @@ to each detection algorithm. The simulation consists of two objects:
 The simulator and it's classes are contained in /utils/simulation_core.py, 
 and the detection algorithms are in /detectors.
 
-## Experiments
+## Experiments <a name="experiments"></a>
 Four experiments are contained in their own folders:
  1) threshold_gridsearch - For a given dataset, calculates the F1-Score over various thresholds.
  2) test_speed - Tests the speed of the algorithms over increasing band/channel numbers.
@@ -54,8 +77,8 @@ Four experiments are contained in their own folders:
  4) test_momentum - Specifically gets the F1-score and AUC of the proposed ERX method for 
 different momentum values.
 
-## Cite this Work
-If you use this work or the datasets please cite this [preprint](https://arxiv.org/abs/2408.14947): 
+## Cite this Work <a name="citing"></a>
+If you use this repository or the datasets please cite this [preprint](https://arxiv.org/abs/2408.14947): 
 ```
 @article{garske2024erx,
   title={ERX - a Fast Real-Time Anomaly Detection Algorithm for Hyperspectral Line-Scanning},
