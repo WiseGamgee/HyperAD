@@ -1,11 +1,11 @@
 # HyperAD
 ## Contents
-1. [Introduction](#introduction-a-nameintroductiona)
-2. [How to Get Started](#how-to-get-started-a-namequickstarta)
-3. [Datasets](#datasets-a-namedatasetsa)
-4. [Line-Scan Simulation](#line-scan-simulation-a-namesimulationa)
-5. [Experiments](#experiments-a-nameexperimentsa)
-6. [Cite this Work](#cite-this-work-a-namecitinga)
+1. [Introduction](#introduction)
+2. [How to Get Started](#quickstart)
+3. [Datasets](#datasets)
+4. [Line-Scan Simulation](#simulation)
+5. [Experiments](#experiments)
+6. [Cite this Work](#citing)
 
 ## Introduction <a name="introduction"></a>
 HyperAD is a Python project that implements various RX-based real-time anomaly detection 
