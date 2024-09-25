@@ -60,6 +60,7 @@ def get_speed_results(config: dict):
             detector_dict["rx_bil"] = rx_bil_detector
 
         # Configure CDLSS-AD detector
+        if config["cdlss_ad"]["include"]:
             cdlss_ad_detector = cdlss_ad.CDLSS_AD(n_bands=n_bands,
                                                   n_pixels=n_pixels,
                                                   buffer_len=config["cdlss_ad"]["buffer_len"],
@@ -68,6 +69,7 @@ def get_speed_results(config: dict):
             detector_dict["cdlss_ad"] = cdlss_ad_detector
 
         # Configure LBL-AD detector
+        if config["lbl_ad"]["include"]:
             lbl_ad_detector = lbl_ad.LblAD(n_bands=n_bands,
                                            n_pixels=n_pixels,
                                            buffer_len=config["lbl_ad"]["buffer_len"],
