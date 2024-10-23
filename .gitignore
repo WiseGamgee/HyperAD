@@ -6,6 +6,7 @@ test_detection/results/
 /test_projection/results/
 threshold_gridsearch/results/
 /cffn_classifier/
+.idea/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
