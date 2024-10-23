@@ -1,0 +1,21 @@
+# Configuration file for running speed test
+# Dataset directory for testing
+HSI_DIR: "data/beach_dataset/beach_hsi.npy"
+MASK_DIR: "data/beach_dataset/beach_mask.npy"
+REVERSE: False
+
+# General detector params
+N_REPEATS: 1
+
+# Skip metrics calculation in show results
+SKIP_METRICS: False
+SHOW_STD_ON_ROC: False
+
+# ERX Params
+BUFFER_LEN: 99
+PROJECTED_DIMENSIONS: 5
+MOMENTUM_LIST: [1, 1, 0.9, 0.5, 0.1, 0.01, 0.001, 0.0001, null]
+LINE_OFFSET: 0
+NORMALISE_MD: True
+THRESHOLD: 3
+

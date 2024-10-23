@@ -1,0 +1,47 @@
+# Configuration file for running speed test
+# Dataset directory for testing
+HSI_DIR: "data/snp_dataset/snp_msi.npy"
+MASK_DIR: "data/snp_dataset/snp_mask.npy"
+REVERSE: False
+
+# List of threshold values to be tested against each model
+THRESHOLD_LIST: [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6]
+
+# General detector params
+N_REPEATS: 5
+
+# Define models to include in test and their parameters
+erx:
+  include: True
+  buffer_len: 99
+  projected_dimensions: 5
+  momentum: 0.1
+  line_offset: 0
+  normalise_md: True
+
+rx_baseline:
+  include: True
+  buffer_len: 99
+  normalise_md: True
+
+lbl_ad:
+  include: True
+  buffer_len: 99
+  pca_dims: 3
+  normalise_md: True
+
+rt_ck_rxd:
+  include: True
+  buffer_len: 99
+  normalise_md: True
+
+rx_bil:
+  include: True
+  buffer_len: 99
+  pixel_dropout: 0.5
+  normalise_md: True
+
+cdlss_ad:
+  include: False
+  buffer_len: 99
+  normalise_md: False

@@ -1,0 +1,53 @@
+# Configuration file for running speed test
+# Dataset directory for testing
+HSI_DIR: "data/beach_dataset/beach_hsi.npy"
+MASK_DIR: "data/beach_dataset/beach_mask.npy"
+REVERSE: False
+
+# General detector params
+N_REPEATS: 5
+
+# Skip metrics calculation in show results
+SKIP_METRICS: False
+
+# Define models to include in test and their parameters
+erx:
+  include: True
+  buffer_len: 99
+  projected_dimensions: 5
+  momentum: 0.1
+  line_offset: 0
+  normalise_md: True
+  threshold: 1.5
+
+rx_baseline:
+  include: True
+  buffer_len: 99
+  normalise_md: True
+  threshold: 1.5
+
+lbl_ad:
+  include: True
+  buffer_len: 99
+  pca_dims: 3
+  normalise_md: True
+  threshold: 1.5
+
+rt_ck_rxd:
+  include: True
+  buffer_len: 99
+  normalise_md: True
+  threshold: 1.5
+
+rx_bil:
+  include: True
+  buffer_len: 99
+  pixel_dropout: 0.5
+  normalise_md: True
+  threshold: 1.5
+
+cdlss_ad:
+  include: False
+  buffer_len: 99
+  normalise_md: True
+  threshold: null
