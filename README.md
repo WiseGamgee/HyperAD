@@ -1,4 +1,15 @@
 # HyperAD
+
+HyperAD is a Python project that implements various RX-based real-time anomaly detection 
+algorithms designed for hyperspectral line-scan cameras. It also proposes the Exponentially moving RX
+algorithm (ERX) for this task. An example of ERX detecting live wildfires is shown below:
+
+<div align="center">
+ <img src="images/snp_gif.gif" width="75%" alt="SNP GIF">
+ <p><em>Line-by-line anomaly detection of wildfires in the Sequoia National Park. The top image is the park,
+and the bottom shows ERX's detection heatmap (Garske et al. 2024).</em></p>
+</div>
+
 ## Contents
 1. [Introduction](#introduction)
 2. [How to Get Started](#quickstart)
@@ -8,16 +19,6 @@
 6. [Cite this Work](#citing)
 
 ## Introduction <a name="introduction"></a>
-HyperAD is a Python project that implements various RX-based real-time anomaly detection 
-algorithms designed for hyperspectral line-scan cameras. It also proposes the Exponentially moving RX
-algorithm (ERX) for this task. An example of ERX detecting live wildfires is shown below:
-
-![SNP False Colour](images/snp_rgb.png)
-![SNP Ground Truth](images/snp_erx.png)
-<p align="center">
- <em> Wildfires in the Sequoia National Park (top) and ERX's detection heatmap (bottom) (Garske et al. 2024).</em>
-</p>
-
 
 Line-scan cameras capture one line of pixels at a time, and require the motion of an attached platform 
 such as a drone, aircraft, or satellite to collect an image. They are an affordable way of collecting
