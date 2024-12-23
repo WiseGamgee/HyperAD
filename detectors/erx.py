@@ -15,7 +15,7 @@ class ERX(Detector):
     def __init__(self,
                  n_bands: int,
                  n_pixels: int,
-                 buffer_len: int,
+                 buffer_len: int = 99,
                  n_projdims: int = 5,
                  momentum: float = 0.1,
                  normalise_md: bool = False):
