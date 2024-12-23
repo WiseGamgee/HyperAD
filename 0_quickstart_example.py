@@ -21,11 +21,11 @@ def quickstart_demo():
     dummy_camera[275:300, 150:175, :] += 1
 
     # Initialize ERX model with parameters:
-    # - n_bands: Number of spectral bands in the data
+    # - n_bands: Number of spectral bands
     # - n_pixels: Width of each line scan in pixels
-    # - buffer_len: Number of previous lines for background estimation
-    # - n_projdims: Number of projection dimensions for dimensionality reduction
-    # - momentum: Learning rate for updating background statistics
+    # - buffer_len: Number of lines to wait for the initial background estimation
+    # - n_projdims: Number of dimensions after sparse random projection (reduced from n_bands to n_projdims).
+    # - momentum: Learning rate for updating background mean and covariance
     model = ERX(n_bands=90,
                 n_pixels=500,
                 buffer_len=99,
