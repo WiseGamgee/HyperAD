@@ -2,7 +2,7 @@
 
 HyperAD is a Python project that implements various RX-based real-time anomaly detection 
 algorithms designed for hyperspectral line-scan cameras. It also proposes the Exponentially moving RX
-algorithm (ERX) for this task. An example of ERX detecting live wildfires is shown below:
+algorithm (ERX) for this task (open access article available in IEEE TGRS [here](https://ieeexplore.ieee.org/abstract/document/10847782)). An example of ERX detecting live wildfires is shown below:
 
 <div align="center">
  <img src="images/snp_gif.gif" width="75%" alt="SNP GIF">
@@ -23,12 +23,12 @@ Line-scan cameras capture one line of pixels at a time, and require the motion o
 such as a drone, aircraft, or satellite to collect an image. They are an affordable way of collecting
 hyperspectral images with high spectral and spatial resolutions.
 <p align="center">
- <img src="images/linescan.png" alt="Line-scanning (Garske et al. 2024)" width="528" height="300" >
+ <img src="images/linescan.png" alt="Line-scanning (Garske et al. 2025)" width="528" height="300" >
 </p>
 <p align="center">
  <em>A line-scan camera capturing one line of pixels at a time as it’s platform (e.g., a drone) moves 
      over the area of interest. These lines form a hyperspectral image, or datacube, with the depth dimension 
-     b representing the spectral bands for each pixel (Garske et al. 2024).</em>
+     b representing the spectral bands for each pixel (Garske et al. 2025).</em>
 </p>
 
 
@@ -104,14 +104,18 @@ For the other experiments download the datasets from [here](https://zenodo.org/d
 Please feel free to raise any issues with this guide or the code in general.
 
 ## Cite this Work <a name="citing"></a>
-If you use this repository or the datasets please cite this [preprint](https://arxiv.org/abs/2408.14947): 
+If you use this repository or the datasets please cite this [article](https://arxiv.org/abs/2408.14947): 
 ```
-@article{garske2024erx,
-  title={ERX - a Fast Real-Time Anomaly Detection Algorithm for Hyperspectral Line-Scanning},
-  author={Garske, Samuel and Evans, Bradley and Artlett, Christopher and Wong, KC},
-  journal={arXiv preprint arXiv:2408.14947},
-  year={2024},
-}
+@article{garske2025erx,
+  author={Garske, Samuel and Evans, Bradley and Artlett, Christopher and Wong, K. C.},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={ERX: A Fast Real-Time Anomaly Detection Algorithm for Hyperspectral Line Scanning}, 
+  year={2025},
+  volume={63},
+  number={5503617},
+  pages={1-17},
+  doi={10.1109/TGRS.2025.3532225}}
+
 ```
 
 If you use the beach dataset please consider citing the following paper as well:
